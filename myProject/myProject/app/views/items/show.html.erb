@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Albumtitle:</strong>
+  <%= @item.albumtitle %>
+</p>
+
+<p>
+  <strong>Albumartist:</strong>
+  <%= @item.albumartist %>
+</p>
+
+<p>
+  <strong>Albumdesc:</strong>
+  <%= @item.albumdesc %>
+</p>
+
+<p>
+  <strong>Albumprice:</strong>
+  <%= @item.albumprice %>
+</p>
+
+<p>
+  <strong>Albumgenre:</strong>
+  <%= @item.albumgenre %>
+</p>
+
+<p>
+  <strong>Albumformat:</strong>
+  <%= @item.albumformat %>
+</p>
+
+<p>
+  <strong>Albumart:</strong>
+  <%= @item.albumart %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

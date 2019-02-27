@@ -1,0 +1,56 @@
+<div class="mainCont">
+
+<%= form_with(model: item, local: true) do |form| %>
+  <% if item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :albumtitle %>
+    <%= form.text_field :albumtitle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :albumartist %>
+    <%= form.text_field :albumartist %>
+  </div>
+
+  <div class="field">
+    <%= form.label :albumdesc %>
+    <%= form.text_area :albumdesc %>
+  </div>
+
+  <div class="field">
+    <%= form.label :albumprice %>
+    <%= form.text_field :albumprice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :albumgenre %>
+    <%= form.text_field :albumgenre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :albumformat %>
+    <%= form.text_field :albumformat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :albumart %>
+    <%= form.text_field :albumart %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+</div>
